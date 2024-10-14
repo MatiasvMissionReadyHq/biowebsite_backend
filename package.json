@@ -2,11 +2,10 @@
   "name": "backend_portafolio",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "api.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "start": "node netlify/functions/server.js",
-    "dev": "netlify dev"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
