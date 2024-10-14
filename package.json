@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "netlify dev"
+    "build": "webpack --config webpack.config.js",
+    "start": "node netlify/functions/server.js",
+    "dev": "netlify dev"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,8 @@
     "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.15",
     "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
   }
 }
