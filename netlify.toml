@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build && npm run export"  # Ensure these commands work correctly
+  functions = "netlify/functions"               # Points to your function directory
+  publish = "dist"           # Points to your published static files
+
+[dev]
+  targetPort = 8888
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"     # Adjust this if your function's path is different
+  status = 301
